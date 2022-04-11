@@ -30,9 +30,10 @@ const Root = () => {
 		document.body.classList.add(layout)
 		console.ignoredYellowBox = ['Warning: Each', 'Warning: Failed']
 		console.disableYellowBox = true
-		document
-			?.getElementById('color')
-			?.setAttribute('href', `/assets/css/${color}.css`)
+		// document
+		// 	?.getElementById('color')
+		// 	?.setAttribute('src', `../src/assets/scss/${color}.scss`)
+		require(`../src/assets/scss/${color}.scss`)
 
 		return function cleanup() {
 			abortController.abort()
